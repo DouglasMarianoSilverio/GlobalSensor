@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalSensor.Application.Api", "GlobalSensor.Application.Api\GlobalSensor.Application.Api.csproj", "{85CF30B9-3892-4D69-8625-1889B9BC2AAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{58D43269-2583-46D4-8855-23ED41095379}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{4457EB96-4BFD-4FEE-84C8-5A4B13C976F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{EE61152B-3F1F-484D-A99F-AEB0F71789BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalSensor.Domain", "GlobalSensor.Domain\GlobalSensor.Domain.csproj", "{E9A25D24-7B51-4EC7-A760-A285601BEDA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalSensor.Infra", "GlobalSensor.Infra\GlobalSensor.Infra.csproj", "{2C84CE59-2A0B-4875-B067-BCCB6553E224}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85CF30B9-3892-4D69-8625-1889B9BC2AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85CF30B9-3892-4D69-8625-1889B9BC2AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85CF30B9-3892-4D69-8625-1889B9BC2AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85CF30B9-3892-4D69-8625-1889B9BC2AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A25D24-7B51-4EC7-A760-A285601BEDA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A25D24-7B51-4EC7-A760-A285601BEDA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A25D24-7B51-4EC7-A760-A285601BEDA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A25D24-7B51-4EC7-A760-A285601BEDA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C84CE59-2A0B-4875-B067-BCCB6553E224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C84CE59-2A0B-4875-B067-BCCB6553E224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C84CE59-2A0B-4875-B067-BCCB6553E224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C84CE59-2A0B-4875-B067-BCCB6553E224}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{85CF30B9-3892-4D69-8625-1889B9BC2AAB} = {58D43269-2583-46D4-8855-23ED41095379}
+		{E9A25D24-7B51-4EC7-A760-A285601BEDA4} = {4457EB96-4BFD-4FEE-84C8-5A4B13C976F9}
+		{2C84CE59-2A0B-4875-B067-BCCB6553E224} = {EE61152B-3F1F-484D-A99F-AEB0F71789BA}
+	EndGlobalSection
+EndGlobal
