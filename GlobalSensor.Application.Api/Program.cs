@@ -1,4 +1,5 @@
 using GlobalSensor.Domain.Interfaces.Repositories;
+using GlobalSensor.Infra.Configurations;
 using GlobalSensor.Infra.Context;
 using GlobalSensor.Infra.Repositories;
 
