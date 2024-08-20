@@ -2,6 +2,8 @@ using GlobalSensor.Domain.Entities;
 using GlobalSensor.Domain.Interfaces.Repositories;
 using GlobalSensor.Infra.Configurations;
 using GlobalSensor.Infra.Context;
+using GlobalSensor.Infra.Mapper;
+using GlobalSensor.Infra.Models;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
@@ -9,7 +11,7 @@ namespace GlobalSensor.Infra.Repositories;
 
 public class SensorDataRepository : ISensorDataRepository
 {
-    private readonly IMongoCollection<SensorData> _sensorDataCollection;
+    private readonly IMongoCollection<SensorDataDocument> _sensorDataCollection;
 
     
     public SensorDataRepository(MongoDbContext context)
@@ -18,12 +20,15 @@ public class SensorDataRepository : ISensorDataRepository
     }
     public async Task<IEnumerable<SensorData>> GetAllAsync()
     {
-        return await _sensorDataCollection.Find(_ => true).ToListAsync();
+        var documents = await _sensorDataCollection.Find(_ => true).ToListAsync();
+        return documents.Select(SensorDataMapper.ToDomain);
     }
 
     public async Task AddAsync(SensorData sensorData)
     {
-        await _sensorDataCollection.InsertOneAsync(sensorData);
+        var document = SensorDataMapper.ToDocument(sensorData);
+
+        await _sensorDataCollection.InsertOneAsync(document);
     }
 
 }

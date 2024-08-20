@@ -1,12 +1,31 @@
+using GlobalSensor.Domain.Entities;
+using GlobalSensor.Domain.Interfaces.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GlobalSensor.Application.Api.Controllers;
-
-public class SensorDataController : Controller
+[ApiController]
+[Route("api/[controller]")]
+public class SensorDataController : ControllerBase
 {
-    // GET
-    public IActionResult Index()
+    private readonly ISensorDataRepository _sensorDataRepository;
+    
+    public SensorDataController(ISensorDataRepository sensorDataRepository)
     {
-        return View();
+        _sensorDataRepository = sensorDataRepository;
     }
+    
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        var sensorDataList = await _sensorDataRepository.GetAllAsync();
+        return Ok(sensorDataList);
+    }
+    
+    [HttpPost]
+    public async Task<IActionResult> Create(SensorData sensorData)
+    {
+        await _sensorDataRepository.AddAsync(sensorData);
+        return Ok();
+    }
+
 }
